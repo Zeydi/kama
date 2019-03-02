@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Un squelette d'application OL</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Bootply" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <!-- navbar theme css-->
+    <link href="navbar-theme/css/bootstrap.min.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="navbar-theme/css/styles.css" rel="stylesheet" />
+
+    <!-- OpenLayers CSS -->
+    <link rel="stylesheet" href="css/ol.css" type="text/css" />
+    <!-- Autres styles de librairies -->
+    <link rel="stylesheet" href="css/ol3-layerswitcher.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- bootswatch yeti theme et jqyery-ui--> 
+     <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css"> 
+     <link rel="stylesheet" type="text/css" href="./css/font-awesome.css"> 
+
+
+    <!-- nos styles personnalisés-->
+
+    <link rel="stylesheet" href="awesomplete-gh-pages/awesomplete.css" /> 
+    <p>    
+        <span id="mouse3857" class="label">0 / 0</span>
+        <span id="mouse4326" class="label">0 / 0</span>
+    </p>    
+  </head>
+  <body>
+    <!-- Notre code HTML -->
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  	<div class="collapse navbar-collapse">
+        <button id="pan" type="button" onclick="location.href='./index.html'" class="btn btn-primary">Plan</button>     
+        <button id="select" type="button" onclick="location.href='http://www.example.com'" class="btn btn-default">Select</button> 
+        <button id="point" type="button" onclick="location.href='http://www.example.com'" class="btn btn-success">Point</button>     
+        <button id="line" type="button" onclick="location.href='http://www.example.com'" class="btn btn-success">Line</button>     
+        <button id="polygon" type="button" onclick="location.href='http://www.example.com'" class="btn btn-success">Polygon</button>     
+        <button id="modify" type="button" onclick="location.href='http://www.example.com'" class="btn btn-danger">Modify</button> 
+        <i class="fa fa-street-view fa-lg" style="color:lawngreen"></i>
+        <div class="col-sm-3 col-md-3 pull-right">     
+            <div class="navbar-text">Zoom sur</div>     
+            <form class="navbar-form" role="search">         
+                <div class="input-group">             
+                    <input class = "form-control" type="text" name="sites" list="siteslist" id="capitals" placeholder="choisir un site ..."/> 
+                   <datalist id="siteslist"></datalist>             
+                   <div class="input-group-btn">                 
+                       <button class="btn btn-default" type="button" onclick="goToSite()">
+                           <i class="fa fa-search fa-lg"></i>
+                       </button>             
+                   </div>         
+               </div>     
+           </form> 
+           </div>
+      </div>  
+     
+    </div>
+     
+    
+   
+    <!--déclaration de l'objet map-->
+      <div id="map"></div>
+
+      <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+      </div>
+    </div>
+       
+
+    <!-- OpenLayers JS-->
+    <script src="resources/ol.js" type="text/javascript"></script>
+    <script src="resources/jquery.js" type="text/javascript"></script>
+    <script src="resources/ol3-layerswitcher.js"></script>
+
+ 
+
+    <!-- Autres librairies JS-->
+    <script type="text/javascript" src="./resources/jquery.js"></script> 
+    <script type="text/javascript" src="./resources/jquery-ui.js"></script> 
+    <script type="text/javascript" src="./resources/bootstrap.min.js"></script> 
+    <script src="awesomplete-gh-pages/awesomplete.js" async></script>
+    <script src="navbar-theme/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <!-- Notre code JavaScript-->
+    <script type="text/javascript" src="./js/awesComplete.js"></script>
+
+    <script type="text/javascript" src="./js/osm_gs.js"></script>
+
+  </body>
+</html>
